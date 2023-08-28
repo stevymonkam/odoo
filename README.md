@@ -63,4 +63,5 @@ Ce projet utilise des volumes Docker pour stocker les données de manière persi
 
 - `odoo_network` : réseau personnalisé pour connecter les conteneurs Odoo et PostgreSQL
 
-![Image d'Odoo](photo/odoo-16-welcome-screenshot (1).png)
+![good luck](odoo/photo/odoo-16-welcome-screenshot.png)
+
