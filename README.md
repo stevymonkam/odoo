@@ -14,15 +14,19 @@
 
 2. Start the container:
 
-docker-compose up
-
+```bash
+   docker-compose up
+```
 Cela lancera les conteneurs Odoo et PostgreSQL en arrière-plan.
 
 Vous pouvez accéder à l'interface Odoo en ouvrant un navigateur web et en visitant http://localhost:80.
 
 3. Pour arrêter les conteneurs, exécutez : 
  
+ 
+```bash
   docker-compose down
+```
 
   # Configuration
 
@@ -63,7 +67,20 @@ Ce projet utilise des volumes Docker pour stocker les données de manière persi
 
 - `odoo_network` : réseau personnalisé pour connecter les conteneurs Odoo et PostgreSQL
 
-![good luck](./odoo/photo/odoo-16-welcome-screenshot.png)
+
+## docker-compose.yml
+
+* odoo:16.0
+* postgres:15
+
+## Odoo 16.0 screenshots after successful installation.
+
 <img src="photo/odoo-16-welcome-screenshot.png" width="50%">
+
+<img src="photo/odoo-16-apps-screenshot.png" width="100%">
+
+<img src="photo/odoo-16-sales-screen.png" width="100%">
+
+<img src="photo/odoo-16-product-form.png" width="100%">
 
 
