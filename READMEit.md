@@ -14,7 +14,7 @@
 
 2. Avviare il contenitore:
 
-"bash."
+```bash
    docker-compose-up
 ```
 Ciò avvierà i contenitori Odoo e PostgreSQL in background.
@@ -23,8 +23,7 @@ Puoi accedere all'interfaccia di Odoo aprendo un browser web e visitando http://
 
 3. Per arrestare i contenitori, eseguire:
  
- 
-"bash."
+ ```bash
   docker-componi giù
 ```
 
