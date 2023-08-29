@@ -24,7 +24,7 @@ Puoi accedere all'interfaccia di Odoo aprendo un browser web e visitando http://
 3. Per arrestare i contenitori, eseguire:
  
  ```bash
-  docker-componi giù
+  docker-compose down
 ```
 
   # Impostare
