@@ -1,71 +1,72 @@
-# odoo
+
+#odoo
 
 ### Installing Odoo 16.0 with one command (Supports multiple Odoo instances on one server).
 
 
-## Prérequis
+## Prerequisites
 
 - Install docker and docker-compose yourself
-- Docker Compose installé sur la machine hôte
+- Docker Compose installed on the host machine
 
-## Utilisation
+## Use
 
-1. Assurez-vous que Docker et Docker Compose sont installés sur votre système.
+1. Make sure Docker and Docker Compose are installed on your system.
 
 2. Start the container:
 
 ```bash
-   docker-compose up
+   docker-compose-up
 ```
-Cela lancera les conteneurs Odoo et PostgreSQL en arrière-plan.
+This will launch Odoo and PostgreSQL containers in the background.
 
-Vous pouvez accéder à l'interface Odoo en ouvrant un navigateur web et en visitant http://localhost:80.
+You can access the Odoo interface by opening a web browser and visiting http://localhost:80.
 
-3. Pour arrêter les conteneurs, exécutez : 
+3. To stop the containers, run:
  
  
 ```bash
   docker-compose down
 ```
 
-  # Configuration
+  # Setup
 
-Ce fichier `docker-compose.yml` définit la configuration des services Docker utilisés pour exécuter Odoo et PostgreSQL dans un environnement conteneurisé.
+This `docker-compose.yml` file defines the configuration of Docker services used to run Odoo and PostgreSQL in a containerized environment.
 
-## Service "web" (Odoo)
+## "Web" service (Odoo)
 
-- Image utilisée : `odoo:16.0`
-- Ports exposés : `80:8069` (interface Odoo accessible depuis le port 80 du navigateur)
-- Dépendances : le service "db" (PostgreSQL)
-- Volumes montés :
-  - `odoo-web-data` : données persistantes pour Odoo
-  - `./config` : fichiers de configuration d'Odoo
-  - `./addons` : addons personnalisés pour Odoo
-- Réseau : `odoo_network`
+- Image used: `odoo:16.0`
+- Exposed ports: `80:8069` (Odoo interface accessible from browser port 80)
+- Dependencies: the "db" service (PostgreSQL)
+- Mounted volumes:
+  - `odoo-web-data`: persistent data for Odoo
+  - `./config`: Odoo configuration files
+  - `./addons`: custom addons for Odoo
+- Network: `odoo_network`
 
 ## Service "db" (PostgreSQL)
 
-- Image utilisée : `postgres:15`
-- Variables d'environnement :
-  - `POSTGRES_DB` : base de données PostgreSQL
-  - `POSTGRES_PASSWORD` : mot de passe de la base de données
-  - `POSTGRES_USER` : utilisateur PostgreSQL
-  - `PGDATA` : emplacement des données PostgreSQL
-- Volumes montés : `odoo-db-data` (données persistantes pour PostgreSQL)
-- Réseau : `odoo_network`
+- Image used: `postgres:15`
+- Environment variables:
+  - `POSTGRES_DB`: PostgreSQL database
+  - `POSTGRES_PASSWORD`: database password
+  - `POSTGRES_USER`: PostgreSQL user
+  - `PGDATA`: PostgreSQL data location
+- Mounted volumes: `odoo-db-data` (persistent data for PostgreSQL)
+- Network: `odoo_network`
 
-## Volumes et Réseau
+## Volumes and Network
 
-Ce projet utilise des volumes Docker pour stocker les données de manière persistante, ainsi qu'un réseau personnalisé pour connecter les conteneurs.
+This project uses Docker volumes to store data persistently, along with a custom network to connect the containers.
 
-### Volumes :
+### Volumes:
 
-- `odoo-web-data` : données persistantes pour Odoo
-- `odoo-db-data` : données persistantes pour PostgreSQL
+- `odoo-web-data`: persistent data for Odoo
+- `odoo-db-data`: persistent data for PostgreSQL
 
-### Réseau :
+### Network :
 
-- `odoo_network` : réseau personnalisé pour connecter les conteneurs Odoo et PostgreSQL
+- `odoo_network`: custom network to connect Odoo and PostgreSQL containers
 
 
 ## docker-compose.yml
