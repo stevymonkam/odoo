@@ -74,10 +74,10 @@ Questo progetto utilizza i volumi Docker per archiviare i dati in modo persisten
 
 ## Schermate di Odoo 16.0 dopo l'installazione riuscita.
 
-<img src="./photo/odoo-16-welcome-screenshot.png" width="50%">
+<img src="../photo/odoo-16-welcome-screenshot.png" width="50%">
 
-<img src="photo/odoo-16-apps-screenshot.png" width="100%">
+<img src="../photo/odoo-16-apps-screenshot.png" width="100%">
 
-<img src="photo/odoo-16-sales-screen.png" width="100%">
+<img src="../photo/odoo-16-sales-screen.png" width="100%">
 
-<img src="photo/odoo-16-product-form.png" width="100%">
+<img src="../photo/odoo-16-product-form.png" width="100%">
