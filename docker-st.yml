@@ -9,7 +9,7 @@ services:
     networks:
       - testcontratti
     deploy:
-      replicas: 2
+      replicas: 5
       placement:
         constraints:
           - "node.role==worker"
