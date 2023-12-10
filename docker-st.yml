@@ -1,0 +1,18 @@
+version: "3.4"
+
+services:
+
+  web:
+    image: stevymonkam/contratti-image:1.0
+    ports:
+      - 5007:80
+    networks:
+      - testcontratti
+    deploy:
+      replicas: 2
+      placement:
+        constraints:
+          - "node.role==worker"
+networks:
+  testcontratti:
+  
